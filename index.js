@@ -1,6 +1,6 @@
 /**
  * @file
- * This is collection of useful helper functions for numbers manipulation.
+ * This is collection of useful helper functions for numbers manipulation in Javascript
  * Copyright: @maevadevs
  */
 
