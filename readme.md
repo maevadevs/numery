@@ -11,7 +11,7 @@ yarn add numery
 ## Usage
 
 ```js
-import { isValidNumber } from 'numery'
+const { isValidNumber } = require('numery')
 ```
 
 ## For Numbers in general

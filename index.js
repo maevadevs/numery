@@ -117,7 +117,7 @@ const isNegativeInteger = x => isInteger(x) && x < 0
 // EXPORT
 // ******
 
-export {
+module.exports = {
   // Numbers in general
   isValidNumber,
   isFiniteNumber,
