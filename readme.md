@@ -1,6 +1,6 @@
 # Numery
 
-Numery is a collection of helper functions for working with numbers in Javascript
+Numery is a collection of useful helper functions for numbers manipulation in Javascript
 
 ## Installation
 
