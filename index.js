@@ -15,7 +15,7 @@
  *  To exclude infinities, use isFiniteNumber(x).
  *  Return true if a valid number. false otherwise.
  **/
-const isValidNumber = x => typeof x === 'number' && !Number.isNaN(x)
+function isValidNumber (x) { return typeof x === 'number' && !Number.isNaN(x) }
 
 /**
  * @function
@@ -24,7 +24,7 @@ const isValidNumber = x => typeof x === 'number' && !Number.isNaN(x)
  *  A finite number is a valid number that is not an infinity (+ or -).
  *  Return true if a finite number. false otherwise.
  **/
-const isFiniteNumber = x => isValidNumber(x) && x !== Infinity && x !== -Infinity
+function isFiniteNumber (x) { return isValidNumber(x) && x !== Infinity && x !== -Infinity }
 
 /**
  * @function
@@ -33,7 +33,7 @@ const isFiniteNumber = x => isValidNumber(x) && x !== Infinity && x !== -Infinit
  *  A finite number is a valid number that is not an infinity (+ or -).
  *  Return true if a finite positive number. false otherwise.
  **/
-const isFinitePositiveNumber = x => isValidNumber(x) && x >= 0 && x !== Infinity && x !== -Infinity
+function isFinitePositiveNumber (x) { return isValidNumber(x) && x >= 0 && x !== Infinity && x !== -Infinity }
 
 /**
  * @function
@@ -42,7 +42,7 @@ const isFinitePositiveNumber = x => isValidNumber(x) && x >= 0 && x !== Infinity
  *  A finite number is a valid number that is not an infinity (+ or -).
  *  Return true if a strict finite positive number. false otherwise.
  **/
-const isStrictFinitePositiveNumber = x => isValidNumber(x) && x > 0 && x !== Infinity && x !== -Infinity
+function isStrictFinitePositiveNumber (x) { return isValidNumber(x) && x > 0 && x !== Infinity && x !== -Infinity }
 
 /**
  * @function
@@ -51,7 +51,7 @@ const isStrictFinitePositiveNumber = x => isValidNumber(x) && x > 0 && x !== Inf
  *  A finite number is a valid number that is not an infinity (+ or -).
  *  Return true if a finite negative number. false otherwise.
  **/
-const isFiniteNegativeNumber = x => isValidNumber(x) && x < 0 && x !== Infinity && x !== -Infinity
+function isFiniteNegativeNumber (x) { return isValidNumber(x) && x < 0 && x !== Infinity && x !== -Infinity }
 
 /**
  * @function
@@ -59,7 +59,7 @@ const isFiniteNegativeNumber = x => isValidNumber(x) && x < 0 && x !== Infinity 
  *  Verify if the argument is an even number.
  *  Return true if even. falso otherwise.
  */
-const isEvenNumber = x => isValidNumber(x) && x % 2 === 0
+function isEvenNumber (x) { return isValidNumber(x) && x % 2 === 0 }
 
 /**
  * @function
@@ -67,7 +67,7 @@ const isEvenNumber = x => isValidNumber(x) && x % 2 === 0
  *  Verify if the argument is an even number.
  *  Return true if odd. falso otherwise.
  */
-const isOddNumber = x => isValidNumber(x) && x % 2 !== 0
+function isOddNumber (x) { return isValidNumber(x) && x % 2 !== 0 }
 
 /**
  * @function
@@ -76,7 +76,7 @@ const isOddNumber = x => isValidNumber(x) && x % 2 !== 0
  *  NOTE: Second argument must be a strict positive number. return false otherwise.
  *  Return true if multiple. false otherwise.
  */
-const isNumberMultipleOf = (x, y) => isValidNumber(x) && isFiniteNumber(y) && y > 0 && x % y !== 0
+function isNumberMultipleOf (x, y) { return isValidNumber(x) && isFiniteNumber(y) && y > 0 && x % y !== 0 }
 
 /* INTEGERS */
 /************/
@@ -88,7 +88,7 @@ const isNumberMultipleOf = (x, y) => isValidNumber(x) && isFiniteNumber(y) && y 
  *  Infinities are not integers.
  *  Return true if an integer. false otherwise.
  */
-const isInteger = x => isFiniteNumber(x) && x % 1 === 0
+function isInteger (x) { return isFiniteNumber(x) && x % 1 === 0 }
 
 /**
  * @function
@@ -96,7 +96,7 @@ const isInteger = x => isFiniteNumber(x) && x % 1 === 0
  *  Verify if a given number is a valid positive integer, including 0.
  *  Return true if a positive integer. false otherwise.
  */
-const isPositiveInteger = x => isInteger(x) && x >= 0
+function isPositiveInteger (x) { return isInteger(x) && x >= 0 }
 
 /**
  * @function
@@ -104,7 +104,7 @@ const isPositiveInteger = x => isInteger(x) && x >= 0
  *  Verify if a given number is a valid positive integer, strictly not equal to 0.
  *  Return true if a strict positive integer. false otherwise.
  */
-const isStrictPositiveInteger = x => isInteger(x) && x > 0
+function isStrictPositiveInteger (x) { return isInteger(x) && x > 0 }
 
 /**
  * @function
@@ -112,7 +112,7 @@ const isStrictPositiveInteger = x => isInteger(x) && x > 0
  *  Verify if a given number is a valid negative integer.
  *  Return true if a negative integer. false otherwise.
  */
-const isNegativeInteger = x => isInteger(x) && x < 0
+function isNegativeInteger (x) { return isInteger(x) && x < 0 }
 
 // EXPORT
 // ******
