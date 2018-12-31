@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * @file
  * This is collection of useful helper functions for numbers manipulation in Javascript
@@ -6,23 +8,31 @@
 
 /* NUMBERS IN GENERAL */
 /**********************/
+// isValidNumber
+// isFiniteNumber
+// isFinitePositiveNumber
+// isStrictFinitePositiveNumber
+// isFiniteNegativeNumber
+// isEvenNumber
+// isOddNumber
+// isNumberMultipleOf
 
 /**
  * @function
  * Signature: isValidNumber(x: Any) => boolean
- *  Verify that the given argument data type is in fact a valid number.
- *  A valid number is any number between [-Infinity, Infinity], including the infinities, but not NaN.
- *  To exclude infinities, use isFiniteNumber(x).
- *  Return true if a valid number. false otherwise.
+ * Verify that the given argument data type is in fact a valid number.
+ * A valid number is any number between [-Infinity, Infinity], including the infinities, but not NaN.
+ * To exclude infinities, use isFiniteNumber(x).
+ * Return true if a valid number. false otherwise.
  **/
 function isValidNumber (x) { return typeof x === 'number' && !Number.isNaN(x) }
 
 /**
  * @function
  * Signature: isFiniteNumber(x: Any) => boolean
- *  Verify that the argument is in fact a finite number.
- *  A finite number is a valid number that is not an infinity (+ or -).
- *  Return true if a finite number. false otherwise.
+ * Verify that the argument is in fact a finite number.
+ * A finite number is a valid number that is not an infinity (+ or -).
+ * Return true if a finite number. false otherwise.
  **/
 function isFiniteNumber (x) { return isValidNumber(x) && x !== Infinity && x !== -Infinity }
 
@@ -80,6 +90,10 @@ function isNumberMultipleOf (x, y) { return isValidNumber(x) && isFiniteNumber(y
 
 /* INTEGERS */
 /************/
+// isInteger
+// isPositiveInteger
+// isStrictPositiveInteger
+// isNegativeInteger
 
 /**
  * @function
@@ -114,11 +128,11 @@ function isStrictPositiveInteger (x) { return isInteger(x) && x > 0 }
  */
 function isNegativeInteger (x) { return isInteger(x) && x < 0 }
 
-// EXPORT
-// ******
+// EXPORTS
+// *******
 
 module.exports = {
-  // Numbers in general
+  // NUMBER IN GENERAL
   isValidNumber,
   isFiniteNumber,
   isFinitePositiveNumber,
@@ -127,7 +141,7 @@ module.exports = {
   isEvenNumber,
   isOddNumber,
   isNumberMultipleOf,
-  // Integers
+  // INTEGERS
   isInteger,
   isPositiveInteger,
   isStrictPositiveInteger,
